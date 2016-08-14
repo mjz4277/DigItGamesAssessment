@@ -51,7 +51,7 @@ MathWhiz.Game = (function(){
 	//Set up all the starting game variables
 	p.init = function(){
 		
-		this.problemNumber = 0;
+		this.problemNumber = 1;
 		this.num1 = 0;
 		this.num2 = 0;
 		this.sum = 0;
@@ -69,7 +69,7 @@ MathWhiz.Game = (function(){
 		this.completedText = new createjs.Text();
 		this.completedText.name = 'Solution';
 		this.completedText.font = '80px sans-serif';
-		this.completedText.color = '#00ff00';
+		this.completedText.color = '#45c326';
 		this.completedText.text = 'Correct!';
 		this.completedText.textAlign = 'center';
 		this.completedText.alpha = 0;
@@ -87,7 +87,7 @@ MathWhiz.Game = (function(){
 	
 	//Resets the game
 	p.reset = function(){
-		this.problemNumber = 0;
+		this.problemNumber = 1;
 		this.num1 = 0;
 		this.num2 = 0;
 		this.sum = 0;
@@ -167,7 +167,7 @@ MathWhiz.Game = (function(){
 		this.questionCounter.name = 'QuestionCounter';
 		this.questionCounter.font = '20px sans-serif';
 		this.questionCounter.color = '#202020';
-		this.questionCounter.text = 'Question ' + (this.problemNumber + 1) + ' of ' + this.TOTAL_PROBLEMS;
+		this.questionCounter.text = 'Question ' + this.problemNumber + ' of ' + this.TOTAL_PROBLEMS;
 		this.questionCounter.x = 10;
 		this.questionCounter.y = this.canvasHeight - 50;
 		
@@ -421,11 +421,11 @@ MathWhiz.Game = (function(){
 		//Change the color and text based on if right or wrong
 		if(isCorrect){
 			this.completedText.text = 'Correct!';
-			this.completedText.color = '#00ff00';
+			this.completedText.color = '#45c326';
 		}
 		else{
 			this.completedText.text = 'Incorrect';
-			this.completedText.color = '#ff0000';
+			this.completedText.color = '#eb1f28';
 		}
 		
 		//self so 'this' can be referenced within other enclosed scopes
@@ -459,7 +459,7 @@ MathWhiz.Game = (function(){
 		var title = new createjs.Text();
 		title.name = 'Title';
 		title.font = '100px sans-serif';
-		title.color = '#567fda';
+		title.color = '#eb1f28';
 		title.text = 'Math Whiz';
 		title.textAlign = 'center';
 		title.x = this.canvasWidth / 2;

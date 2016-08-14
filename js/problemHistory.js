@@ -21,7 +21,7 @@ MathWhiz.ProblemHistory = (function(){
 		this.problem = new createjs.Text();
 		this.problem.name = 'Problem';
 		this.problem.font = '40px sans-serif';
-		this.problem.color = this.correct ? '#00dd00' : '#dd0000';
+		this.problem.color = this.correct ? '#45c326' : '#eb1f28';
 		
 		var problemText = this.num1 + ' + ' + this.num2 + ' = ' + this.answer
 		if(!this.correct) problemText += ' (Correct: ' + this.sum + ')';

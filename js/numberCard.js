@@ -6,15 +6,15 @@ MathWhiz.NumberCard = (function(){
 	
 	function NumberCard(x, y, num, container, background, forground){
 		this.cardBack = new createjs.Shape();
-		this.cardBack.graphics.beginFill(background).drawRoundRect(x, y, 70, 100, 5);
+		this.cardBack.graphics.beginFill(background).drawRoundRect(x, y, 85, 100, 5);
 		
 		this.cardNumber = new createjs.Text();
 		this.cardNumber.name = 'NumberCard';
-		this.cardNumber.font = '80px sans-serif';
+		this.cardNumber.font = '70px sans-serif';
 		this.cardNumber.color = forground;
 		this.cardNumber.text = num;
-		this.cardNumber.x = x + 18;
-		this.cardNumber.y = y;
+		this.cardNumber.x = x + 21;
+		this.cardNumber.y = y + 10;
 		
 		this.container = container;
 		this.container.addChild(this.cardBack);
