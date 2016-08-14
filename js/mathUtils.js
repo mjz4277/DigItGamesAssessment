@@ -18,6 +18,7 @@ MathWhiz.MathUtils = {
 		return this.getRandomNumber(min, max);
 	},
 	
+	//Gets the length of a number
 	getNumberSize: function(num){
 		return num.length;
 	},

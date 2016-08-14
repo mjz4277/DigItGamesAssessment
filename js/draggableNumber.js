@@ -1,6 +1,7 @@
 //Encapsulate the app in an object (basically namespace)
 var MathWhiz = MathWhiz || {}
 
+//A number used by the player to answer an equation
 MathWhiz.DraggableNumber = (function(){
 	
 	function DraggableNumber(x, y, num, container){
@@ -40,6 +41,7 @@ MathWhiz.DraggableNumber = (function(){
 	
 	var p = DraggableNumber.prototype;
 	
+	//Adds the drag event to the number
 	p.buildMouseListeners = function(){
 		var self = this;
 		this.dragNumber.on('pressmove', function(ev){
@@ -48,6 +50,7 @@ MathWhiz.DraggableNumber = (function(){
 		});
 	};
 	
+	//Remove the object from the scene
 	p.removeNumber = function(){
 		this.container.removeChild(this.dragNumber);
 	}

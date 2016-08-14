@@ -1,11 +1,12 @@
 //Encapsulate the app in an object (basically namespace)
 var MathWhiz = MathWhiz || {}
 
+//A rounded rectangle with a number in it
 MathWhiz.NumberCard = (function(){
 	
 	function NumberCard(x, y, num, container, background, forground){
 		this.cardBack = new createjs.Shape();
-		this.cardBack.graphics.beginFill(background).drawRoundRect(x, y, 80, 100, 5);
+		this.cardBack.graphics.beginFill(background).drawRoundRect(x, y, 70, 100, 5);
 		
 		this.cardNumber = new createjs.Text();
 		this.cardNumber.name = 'NumberCard';
@@ -24,11 +25,13 @@ MathWhiz.NumberCard = (function(){
 	
 	var p = NumberCard.prototype;
 	
+	//Change both the text and the stored number
 	p.changeNumber = function(newNumber){
 		this.cardNumber.text = newNumber;
 		this.number = newNumber;
 	}
 	
+	//Remove the card object from the scene
 	p.removeCard = function(){
 		this.container.removeChild(this.cardNumber);
 		this.container.removeChild(this.cardBack);
