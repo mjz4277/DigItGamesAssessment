@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Math Whiz</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='canvas-wrapper'>
+			<canvas id='game-canvas' width='1024' height='768'></canvas>
+		</div>
+		
+		<script src='libs/jQuery/jquery-3.1.0.min.js'></script>
+		<script src='libs/EaselJS-0.8.2/lib/easeljs-0.8.2.min.js'></script>
+		<script src='libs/PreloadJS-0.6.2/lib/preloadjs-0.6.2.min.js'></script>
+		<script src='js/mathUtils.js'></script>
+		<script src='js/numberCard.js'></script>
+		<script src='js/draggableNumber.js'></script>
+		<script src='js/problemHistory.js'></script>
+		<script src='js/game.js'></script>
+		<script>
+			$(document).ready(function(){
+				var game = new MathWhiz.Game();
+			});
+		</script>
+	</body>
+</html>
